@@ -90,8 +90,8 @@ function About() {
                 <br />
                 <span className="flex justify-center items-center rounded-md bg-white p-4">
                   <span className="spanQuote py-2">
-                    "Whatever you do, work heartily, as for the Lord and not for
-                    men" - Colossians 3:23{" "}
+                    &rdquo;Whatever you do, work heartily, as for the Lord and
+                    not for men&rdquo; - Colossians 3:23{" "}
                   </span>
                 </span>
               </p>
@@ -113,8 +113,8 @@ function About() {
                 Wrestling
               </h1>
               <p className="text-xl text-center">
-                I've been wrestling since second grade. Cool right? (Im guessing
-                you dont actually care, its okay).
+                I&#39;ve been wrestling since second grade. Cool right? (Im
+                guessing you dont actually care, its okay).
                 <br />
                 <br />I believe my life as a wrestler is ignificant to many
                 aspects of my person:

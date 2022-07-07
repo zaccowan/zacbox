@@ -65,7 +65,7 @@ const Home: NextPage = () => {
                   variants={scaleUpRedBlue}
                   whileHover={{ scale: [1, 1.2, 1] }}
                 >
-                  Howdy! I'm Zac
+                  Howdy! I&#39;m Zac
                 </motion.h1>
               </div>
             </motion.div>

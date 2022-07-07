@@ -60,7 +60,7 @@ function Unreal() {
             style={{ y: yHero, opacity: opacityHero }}
           >
             <h1 className="text-white text-5xl tracking-wider leading-snug font-normal">
-              The world's most open and advanced real-time 3D creation tool
+              The world&#39;s most open and advanced real-time 3D creation tool
             </h1>
             <div className="px-4 py-2 border-2 border-sky-400 w-max cursor-pointer hover:shadow-btnShadow transition duration-300">
               <h2 className="uppercase text-white">Learn More about UE5</h2>
@@ -87,8 +87,8 @@ function Unreal() {
             </h1>
             <p className=" leading-normal text-center whitespace-pre-line pb-20">
               With Unreal Engine, you can bring amazing real-time experiences to
-              life using the world’s most advanced real-time 3D creation tool.{" "}
-              <br />
+              life using the world&#39;s most advanced real-time 3D creation
+              tool. <br />
               From first projects to the most demanding challenges, our free and
               accessible resources and inspirational community empower everyone
               to realize their ambitions.
@@ -113,7 +113,7 @@ function Unreal() {
               <p className="py-4 pb-8 h-32">
                 With hundreds of hours of free online learning content, an
                 extensive library of webinars, and options for instructor-led
-                training, we have a way to learn that's right for you.
+                training, we have a way to learn that&#39;s right for you.
               </p>
               <div className="px-4 py-2 border-2 border-sky-400 w-max cursor-pointer hover:shadow-btnShadow transition duration-300">
                 <h2 className="uppercase text-black">Start Learning</h2>
@@ -223,8 +223,8 @@ function Unreal() {
               </h1>
               <p className="tracking-wide leading-relaxed">
                 With this release, we aim to empower both large and small teams
-                to really push the boundaries of what’s possible, visually and
-                interactively. UE5 will enable game developers and creators
+                to really push the boundaries of what&#39;s possible, visually
+                and interactively. UE5 will enable game developers and creators
                 across industries to realize next-generation real-time 3D
                 content and experiences with greater freedom, fidelity, and
                 flexibility than ever before.
