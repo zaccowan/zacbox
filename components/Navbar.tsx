@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
 import { MenuAlt4Icon } from "@heroicons/react/solid";

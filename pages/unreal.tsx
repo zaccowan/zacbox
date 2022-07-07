@@ -2,7 +2,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-function unreal() {
+function Unreal() {
   const [windowHeight, setWindowHeight] = useState<number>(500);
   const { scrollYProgress } = useViewportScroll();
   const scaleOut = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
@@ -266,4 +266,4 @@ function unreal() {
   );
 }
 
-export default unreal;
+export default Unreal;

@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
-import Navbar from "../components/Navbar";
+import React from "react";
 import Skills from "../components/Skills";
 
-function about() {
+function About() {
   return (
     <main>
       <section className="mb-40 ">
@@ -223,4 +222,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;
