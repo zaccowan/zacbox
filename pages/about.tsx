@@ -3,8 +3,6 @@ import Navbar from "../components/Navbar";
 import Skills from "../components/Skills";
 
 function about() {
-  const buzzwordRef = useRef<String>(null);
-  const [buzwordEntered, setBuzwordEntered] = useState<boolean>(false);
   return (
     <main>
       <section className="mb-40 ">

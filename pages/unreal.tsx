@@ -23,7 +23,6 @@ function unreal() {
               src="/ue-horizontal-logo-cba14ebde1ea.svg"
               alt=""
             />
-            {/* <h1 className="navH1">Unreal Engine</h1> */}
           </Link>
           <ul className="navUL">
             <li className="navLI">Products</li>
