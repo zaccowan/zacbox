@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.drop-shadow-2xl {
+    --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / .1)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.3));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+
+@layer components {
+    html {
+        @apply scrollbar-thin scrollbar-thumb-red-400 hover:scrollbar-thumb-red-400 scrollbar-track-transparent overflow-y-scroll
+    }
+    .navH1 {
+        @apply text-xl font-extrabold uppercase pl-4 py-4 cursor-pointer text-white tracking-wide
+    }
+    .navUL {
+        @apply block lg:flex items-center gap-x-4 xl:gap-x-8
+    }
+    .navLI {
+        @apply uppercase text-sm cursor-pointer text-white tracking-wide py-4 hover:border-b-4 hover:border-sky-400
+    }
+
+    .learnMoreBtn {
+        @apply px-4 py-2 border-2 border-sky-400 w-max cursor-pointer
+    }
+    .redToBlueTextGradient {
+        @apply bg-gradient-to-br from-blue-400 to-red-400 bg-clip-text text-transparent
+    }
+    .spanQuote {
+        @apply text-5xl font-thin redToBlueTextGradient
+    }
+}
