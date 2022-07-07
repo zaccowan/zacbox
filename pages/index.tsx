@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                     x: xInBlue,
                   }}
                 >
-                  <h1 className="text-center group-hover:scale-90 transition pb-20 group-hover:animate-bounce">
+                  <h1 className="text-center group-hover:scale-90 transition pb-20 xl:group-hover:animate-bounce">
                     Unreal Engine Landing Page (Front End)
                   </h1>
                   <img

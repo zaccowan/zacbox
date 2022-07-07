@@ -48,7 +48,7 @@ function Contact() {
           Message
         </label>
         <textarea
-          className="border rounded-2xl shadow-lg px-4 py-2 text-center w-[100%] min-h-[4.2rem] lg:min-h-[3rem]"
+          className="border rounded-2xl shadow-lg px-4 py-2 text-center w-[100%] min-h-[5rem] lg:min-h-[3rem]"
           type="message"
           placeholder="My name is Doug Dimmadome, owner of the Dimmsdale Dimmadome!"
           required

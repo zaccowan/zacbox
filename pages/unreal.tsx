@@ -24,7 +24,7 @@ function Unreal() {
               alt=""
             />
           </Link>
-          <ul className="navUL">
+          <ul className="navUL hidden lg:flex">
             <li className="navLI">Products</li>
             <li className="navLI">Solutions</li>
             <li className="navLI">News & Events</li>
@@ -99,7 +99,7 @@ function Unreal() {
           //
           //
          */}
-          <div className="flex gap-x-4 max-w-6xl mx-auto pb-20">
+          <div className="flex justify-center gap-x-4 mx-4 xl:max-w-6xl xl:mx-auto pb-20">
             <motion.div
               className="border-t-2 border-sky-400 w-1/3"
               initial={{ y: 100, opacity: 0 }}
@@ -110,7 +110,7 @@ function Unreal() {
               <h1 className="text-3xl pt-10 hover:text-sky-600">
                 Learn Unreal Engine
               </h1>
-              <p className="py-4 pb-8 h-32">
+              <p className="py-4 pb-8">
                 With hundreds of hours of free online learning content, an
                 extensive library of webinars, and options for instructor-led
                 training, we have a way to learn that&#39;s right for you.
@@ -129,7 +129,7 @@ function Unreal() {
               <h1 className="text-3xl pt-10 hover:text-sky-600">
                 Join the community
               </h1>
-              <p className="py-4 pb-8 h-32">
+              <p className="py-4 pb-8">
                 Unreal creators are the true power behind Unreal Engine. Be part
                 of a community that builds cutting-edge experiences, and
                 supports each other along the way.
@@ -146,7 +146,7 @@ function Unreal() {
               transition={{ duration: 1, type: "spring", delay: 0.5 }}
             >
               <h1 className="text-3xl pt-10 hover:text-sky-600">Get support</h1>
-              <p className="py-4 pb-8 h-32">
+              <p className="py-4 pb-8">
                 Explore comprehensive reference documentation, instructional
                 guides, community-based support, and options for dedicated
                 professional support.

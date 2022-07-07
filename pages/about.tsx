@@ -15,10 +15,10 @@ function About() {
           <h1 className="font-bold text-6xl drop-shadow-lg z-50 -mt-20">
             About Me
           </h1>
-          <div className=" absolute -bottom-32 bg-gradient-to- border-t-2  from-white/50 to-white/5 backdrop-blur-sm w-[40rem] h-[25rem] flex items-center justify-center rounded-t-full">
+          <div className="absolute -bottom-32 xl:bg-gradient-to-b xl:border-t-2  from-white/50 to-white/5 xl:backdrop-blur-sm w-[40rem] h-[25rem] flex items-center justify-center rounded-t-full">
             <img
               src="/about/portfolio-mask.png"
-              className="h-96 drop-shadow-2xl object-contain brightness-90 absolute bottom-20 opacity-95"
+              className="h-96 drop-shadow-2xl object-contain brightness-90 absolute bottom-20"
             />
           </div>
         </div>
@@ -56,7 +56,6 @@ function About() {
               software development. Whether its the begining stages of problem
               assessment or the nitpicky implementation of a long pondered
               solution, <br />
-              <br />
               <span className="redToBlueTextGradient font-bold">
                 I have a passion for solving problems, thinking creatively,
                 learning constantly, and writing well organized, efficient code.
@@ -116,7 +115,7 @@ function About() {
                 I&#39;ve been wrestling since second grade. Cool right? (Im
                 guessing you dont actually care, its okay).
                 <br />
-                <br />I believe my life as a wrestler is ignificant to many
+                <br />I believe my life as a wrestler is significant to many
                 aspects of my person:
                 <br />
                 <span className="redToBlueTextGradient font-bold">
@@ -127,10 +126,10 @@ function About() {
                 ability to count past 7, yada yada yada.
                 <br />
                 <br />
-                The truth is I care span a lot. Much more then my poor sarcasim
-                may make you think. I want (and sort of need) to work for
-                others. You wouldnt think that would come from an individualized
-                sport like wrestling but, Im would like to testify to that fact.
+                The truth is I care a lot. Much more then my poor sarcasim may
+                make you think. I want (and sort of need) to work for others.
+                You wouldnt think that would come from an individualized sport
+                like wrestling but, Im would like to testify to that fact.
                 <br />
                 <br />
                 <span className="flex justify-center items-center rounded-md bg-zinc-100 p-4">
@@ -190,8 +189,8 @@ function About() {
                 When looking around youre going to find a lot of projects of
                 varrying completion. Some front-end only, some backend
                 extravaganzas (because backend is so flashy and visually
-                appealing), some project far from completion, and some
-                fully-refined gems.
+                appealing), some far from completion, and some fully-refined
+                gems.
                 <br />
                 <br />
                 The point is expect to find a lot of a lot.
@@ -210,9 +209,10 @@ function About() {
                   have looked better if I left it as a pile of wet sand.
                 </span>
                 <br />
-                At the end of the day these many of the projects on Zacbox are
-                meant to be admired for a short time and forgotten with the high
-                tide.
+                At the end of the day many of the projects on Zacbox are meant
+                to be admired for a short time and forgotten with the high tide.
+                <br />
+                All in the name of learning.
               </p>
             </div>
           </div>

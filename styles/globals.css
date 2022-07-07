@@ -24,7 +24,7 @@ html {
         @apply block lg:flex items-center gap-x-4 xl:gap-x-8
     }
     .navLI {
-        @apply uppercase text-sm cursor-pointer text-white tracking-wide py-4 hover:border-b-4 hover:border-sky-400
+        @apply uppercase text-xs xl:text-sm cursor-pointer text-white xl:tracking-wide py-4 hover:border-b-4 hover:border-sky-400
     }
 
     .learnMoreBtn {
