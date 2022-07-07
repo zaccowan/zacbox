@@ -104,7 +104,7 @@ function Skills() {
         <div className="relative w-auto group">
           <img
             className="w-40 h-40 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
-            src="/skills/tailwind-logo.png"
+            src="/skills/Tailwind-Logo.png"
           />
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Tailwind</div>
