@@ -12,7 +12,7 @@ function Unreal() {
   const yAfterHero = useTransform(scrollYProgress, [0.5, 1], [1000, 0]);
   useEffect(() => {
     setWindowHeight(window.outerHeight / 2.5);
-  }, [window]);
+  }, []);
   return (
     <div className="relative bg-gray-900 overflow-hidden">
       <nav className="z-50 absolute top-0 left-0 right-0 flex items-center justify-between hover:bg-gray-900/50 transition backdrop-blur-sm hover:backdrop-blur-xl min-h-[5rem]">
