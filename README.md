@@ -13,7 +13,7 @@ Contact Form,
 Image Gallery (2D and 3D using Three JS),
 Blog,
 
-# Dependicies
+# Dependencies
 next,
 react,
 react-dom,
