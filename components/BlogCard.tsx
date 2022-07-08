@@ -16,7 +16,7 @@ function BlogCard({
         <h2 className="font-thin text-4xl tracking-widest redToBlueTextGradient lg:group-hover:translate-x-4 lg:group-hover:font-semibold transition-all duration-500 ease-out">
           {postTitle}
         </h2>
-        <p className="text-lg leading-loose tracking-wide font-serif indent-10 break-all">
+        <p className="text-lg leading-loose tracking-wide font-serif lg:indent-10 break-all">
           {postParagraph}
         </p>
         <p className="italic tracking-widest text-">{postDate}</p>
