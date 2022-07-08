@@ -129,7 +129,7 @@ function About() {
                 The truth is I care a lot. Much more then my poor sarcasim may
                 make you think. I want (and sort of need) to work for others.
                 You wouldnt think that would come from an individualized sport
-                like wrestling but, Im would like to testify to that fact.
+                like wrestling but, I would like to testify to that fact.
                 <br />
                 <br />
                 <span className="flex justify-center items-center rounded-md bg-zinc-100 p-4">
