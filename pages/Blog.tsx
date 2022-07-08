@@ -20,7 +20,7 @@ function Blog() {
     },
   ];
   return (
-    <div className="py-20 mx-4 lg:max-w-5xl lg:mx-auto">
+    <div className="py-20 mx-4 lg:max-w-5xl lg:mx-auto h-screen">
       <h1 className="font-semibold text-4xl redToBlueTextGradient py-4">
         Welcome To My Blog
       </h1>
@@ -36,12 +36,12 @@ function Blog() {
         ))}
       </div>
 
-      {/* <div className="absolute bottom-40 top-40 left-0 right-0 flex items-center justify-center text-6xl text-center bg-red-600/20">
-        <h1 className="redToBlueTextGradient font-thin">
+      <div className="absolute bottom-0 top-0 left-0 right-0 py-80 text-6xl text-center bg-black/20 backdrop-blur-sm">
+        <h1 className="text-white font-bold drop-shadow-2xl">
           Blog Under Construction <br />
           Come back later!
         </h1>
-      </div> */}
+      </div>
     </div>
   );
 }
