@@ -4,6 +4,7 @@ import BlogCard from "../components/BlogCard";
 function Blog() {
   const testPosts = [
     {
+      postId: 1,
       postImgUrl: "/bg/AboutBG.jpg",
       postTitle: "Test Title",
       postParagraph:
@@ -11,6 +12,7 @@ function Blog() {
       postDate: "07/08/2022",
     },
     {
+      postId: 2,
       postImgUrl:
         "https://images.unsplash.com/photo-1657120109154-f582a33fc546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
       postTitle: "Unspash Image Test",
@@ -28,6 +30,7 @@ function Blog() {
       <div className="space-y-20">
         {testPosts.map((post) => (
           <BlogCard
+            key={post.postId}
             postImgUrl={post.postImgUrl}
             postTitle={post.postTitle}
             postParagraph={post.postParagraph}
