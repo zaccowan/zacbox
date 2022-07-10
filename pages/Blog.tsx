@@ -37,7 +37,7 @@ function Blog() {
             postImgUrl={post.postImgUrl}
             postTitle={post.postTitle}
             postSummary={post.postSummary}
-            postParagraphs={post.postParagraphs}
+            postParagraphs={post?.postParagraphs}
             postDate={post.postDate}
           />
         ))}

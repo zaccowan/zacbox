@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 
 function PostPage() {
   const router = useRouter();
-  const { postImgUrl, postTitle, postParagraphs, postDate } = router.query;
-  const paragraphs = postParagraphs;
+  const { postImgUrl, postTitle, postDate } = router.query;
+  const postParagraphs = router.query.postParagraphs as string[];
   return (
     <div className="pt-40 ">
       <div className="flex flex-col items-center  space-y-8">
@@ -20,7 +20,7 @@ function PostPage() {
         />
       </div>
       <div className="bg-zinc-800 mt-20 py-20 ">
-        {paragraphs?.map((paragraph) => (
+        {postParagraphs?.map((paragraph: string) => (
           <p className="lg:max-w-5xl lg:mx-auto mx-4 text-center text-white text-2xl py-4">
             {" "}
             {paragraph}
