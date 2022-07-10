@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact.js";
+import TextTransition, { presets } from "react-text-transition";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -41,6 +42,22 @@ const Home: NextPage = () => {
     hidden: { scale: 0 },
   };
 
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+  const scrollingInfo = [
+    "Student at Bellarmine University",
+    "CE & Mathematics Double Major",
+    "Web Developer",
+    "Follower of Jesus Christ",
+    "Division 1 Wrestler",
+  ];
+
   return (
     <div className="">
       <motion.div
@@ -70,13 +87,26 @@ const Home: NextPage = () => {
               </div>
             </motion.div>
           </Link>
+
+          <motion.div
+            className="flex justify-center"
+            variants={scaleDownUpFade}
+          >
+            <TextTransition
+              className="font-semibold text-xl text-red-400 text-center"
+              springConfig={presets.wobbly}
+            >
+              {scrollingInfo[index % scrollingInfo.length]}
+            </TextTransition>
+          </motion.div>
+
           <motion.p
             className="text-xl font-semibold text-center rounded-md p-4"
             variants={scaleDownUpFade}
             onAnimationComplete={() => setIntroFinished(true)}
           >
             Welcome to my sandbox. <br /> Here you can find various pieces of my
-            web development test projects.
+            web development test projects and a little bit about me!
           </motion.p>
         </motion.div>
       </motion.div>

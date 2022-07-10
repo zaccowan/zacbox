@@ -17,7 +17,7 @@ function Navbar() {
           <>
             <NavItem link="/" text="Home" />
             <NavItem link="/about" text="About" />
-            <NavItem link="/unreal" text="Unreal Mockup" />
+            <NavItem link="/Projects" text="Projects" />
             <NavItem link="/Gallery" text="Gallery" />
             <NavItem link="/Blog" text="Blog" />
           </>

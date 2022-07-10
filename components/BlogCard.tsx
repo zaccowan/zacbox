@@ -4,6 +4,7 @@ import React from "react";
 function BlogCard({
   postImgUrl,
   postTitle,
+  postSummary,
   postParagraph,
   postDate,
 }: BlogProps) {
@@ -11,7 +12,7 @@ function BlogCard({
     <Link
       href={{
         pathname: `/Blog/${postTitle}`,
-        query: { postImgUrl, postTitle, postParagraph, postDate },
+        query: { postImgUrl, postTitle, postSummary, postParagraph, postDate },
       }}
     >
       <div className="flex-col lg:flex-row flex space-y-8 lg:space-y-0 justify-between border shadow-lg rounded-2xl lg:hover:scale-110 transition-all duration-300 cursor-pointer group p-8">
@@ -24,7 +25,7 @@ function BlogCard({
             {postTitle}
           </h2>
           <p className="text-lg leading-loose tracking-wide font-serif lg:indent-10 break-words">
-            {postParagraph}
+            {postSummary}
           </p>
           <p className="italic tracking-widest text-">{postDate}</p>
         </div>
