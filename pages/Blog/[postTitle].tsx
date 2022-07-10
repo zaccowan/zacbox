@@ -21,7 +21,10 @@ function PostPage() {
       </div>
       <div className="bg-zinc-800 mt-20 py-20 ">
         {postParagraphs?.map((paragraph: string) => (
-          <p className="lg:max-w-5xl lg:mx-auto mx-4 text-center text-white text-2xl py-4">
+          <p
+            key={paragraph.substring(0, 22)}
+            className="lg:max-w-5xl lg:mx-auto mx-4 text-center text-white text-2xl py-4"
+          >
             {" "}
             {paragraph}
           </p>
