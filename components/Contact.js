@@ -8,7 +8,7 @@ function Contact() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="my-20 m-auto max-w-5xl -space-y-20 text-center border p-2 rounded-3xl bg-gradient-to-r from-blue-600 to-red-400 box-border shadow-2xl"
+      className="my-20 m-auto max-w-5xl -space-y-14 text-center border p-2 rounded-3xl bg-gradient-to-r from-blue-600 to-red-400 box-border shadow-2xl"
     >
       <div className="space-y-8 bg-white p-10 lg:p-20 rounded-2xl">
         <label

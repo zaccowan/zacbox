@@ -2,6 +2,6 @@ type BlogProps = {
   postImgUrl: string;
   postTitle: string;
   postSummary: string;
-  postParagraph: string;
+  postParagraphs: string[];
   postDate: string;
 };

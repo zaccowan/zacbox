@@ -5,14 +5,14 @@ function BlogCard({
   postImgUrl,
   postTitle,
   postSummary,
-  postParagraph,
+  postParagraphs,
   postDate,
 }: BlogProps) {
   return (
     <Link
       href={{
         pathname: `/Blog/${postTitle}`,
-        query: { postImgUrl, postTitle, postSummary, postParagraph, postDate },
+        query: { postImgUrl, postTitle, postSummary, postParagraphs, postDate },
       }}
     >
       <div className="flex-col lg:flex-row flex space-y-8 lg:space-y-0 justify-between border shadow-lg rounded-2xl lg:hover:scale-110 transition-all duration-300 cursor-pointer group p-8">

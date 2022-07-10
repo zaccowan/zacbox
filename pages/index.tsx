@@ -42,22 +42,6 @@ const Home: NextPage = () => {
     hidden: { scale: 0 },
   };
 
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
-  const scrollingInfo = [
-    "Student at Bellarmine University",
-    "CE & Mathematics Double Major",
-    "Web Developer",
-    "Follower of Jesus Christ",
-    "Division 1 Wrestler",
-  ];
-
   return (
     <div className="">
       <motion.div
@@ -66,7 +50,7 @@ const Home: NextPage = () => {
         initial={"hidden"}
       >
         <motion.div
-          className="w-[25rem]"
+          className="w-[25rem] relative"
           style={{ x: useTransform(scrollYProgress, [0, 1], [0, 2500]) }}
           variants={fadeInFromRight}
         >
@@ -88,18 +72,6 @@ const Home: NextPage = () => {
             </motion.div>
           </Link>
 
-          <motion.div
-            className="flex justify-center"
-            variants={scaleDownUpFade}
-          >
-            <TextTransition
-              className="font-semibold text-xl text-red-400 text-center"
-              springConfig={presets.wobbly}
-            >
-              {scrollingInfo[index % scrollingInfo.length]}
-            </TextTransition>
-          </motion.div>
-
           <motion.p
             className="text-xl font-semibold text-center rounded-md p-4"
             variants={scaleDownUpFade}
@@ -114,17 +86,12 @@ const Home: NextPage = () => {
       {introFinished && (
         <>
           <motion.div>
-            <Link className="" href="/unreal">
+            <Link className="" href="/Projects">
               <motion.div
                 className="cursor-pointer flex justify-center items-center bg-blue-400 hover:bg-blue-500 transition duration-300 text-white group"
                 transition={{ duration: 2, type: "spring" }}
               >
-                <motion.div
-                  className="text-4xl font-bold py-40"
-                  style={{
-                    x: xInBlue,
-                  }}
-                >
+                <motion.div className="text-5xl font-bold py-40">
                   <h1 className="text-center group-hover:scale-90 transition xl:group-hover:animate-bounce">
                     Projects
                   </h1>
@@ -140,14 +107,22 @@ const Home: NextPage = () => {
                 </motion.div>
               </motion.div>
             </Link>
-            <motion.div
-              className="h-[50vh] flex justify-center items-center bg-red-400 text-white"
-              transition={{ duration: 2, type: "spring" }}
-            >
-              <motion.h1 className="text-4xl font-bold" style={{ x: xInRed }}>
-                Undergrad Student
-              </motion.h1>
-            </motion.div>
+            <Link className="" href="/Blog">
+              <motion.div
+                className="cursor-pointer flex justify-center items-center bg-red-400 hover:bg-red-500 transition duration-300 text-white group"
+                transition={{ duration: 2, type: "spring" }}
+              >
+                <motion.div className="text-5xl font-bold py-40">
+                  <h1 className="text-center group-hover:scale-90 transition xl:group-hover:animate-bounce">
+                    My Blog
+                  </h1>
+                  <p className="text-center text-lg lg:text-xl py-20 max-w-sm lg:max-w-4xl mx-auto">
+                    I have a blog too. How cool right. <br /> Please read, I
+                    spent at least 3 minutes on it.
+                  </p>
+                </motion.div>
+              </motion.div>
+            </Link>
           </motion.div>
 
           <Skills />
