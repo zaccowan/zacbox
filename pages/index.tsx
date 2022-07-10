@@ -76,7 +76,7 @@ const Home: NextPage = () => {
             hover:from-blue-600 hover:to-red-400 cursor-pointer box-border"
               title="About Me"
             >
-              <div className="text-5xl font-thin flex justify-center items-center rounded-md bg-white h-[100%] w-[100%]">
+              <div className="text-5xl font-thin flex justify-center items-center rounded-md bg-white h-[100%] w-[100%] py-2">
                 <motion.h1
                   className="redToBlueTextGradient py-2"
                   variants={scaleUpRedBlue}
@@ -125,22 +125,17 @@ const Home: NextPage = () => {
                     x: xInBlue,
                   }}
                 >
-                  <h1 className="text-center group-hover:scale-90 transition pb-20 xl:group-hover:animate-bounce">
-                    Unreal Engine Landing Page (Front End)
+                  <h1 className="text-center group-hover:scale-90 transition xl:group-hover:animate-bounce">
+                    Projects
                   </h1>
-                  <img
-                    className="rounded-2xl max-w-md md:max-w-3xl mx-auto lg:max-w-6xl group-hover:scale-110 transition"
-                    src="/unreal-landing-previw.gif"
-                    alt=""
-                  />
-                  <p className="text-center text-lg lg:text-xl pt-20 max-w-sm lg:max-w-4xl mx-auto">
-                    Impulsively did this little mini project one night after
-                    becoming fascinated with the unreal engine landing page.
+                  <p className="text-center text-lg lg:text-xl py-20 max-w-sm lg:max-w-4xl mx-auto">
+                    Please do click this lovely blue button to see my projects.{" "}
                     <br />
-                    <br />
-                    Notes: <br />
-                    -- Took zero time making the page responsive. <br /> -- Main
-                    Focus was the scroll effect exemplified on the landing page.
+                    <span className="text-sm italic">
+                      p.s. I have a lot of ongoing projects to present soon but
+                      for now enjoy some mini projects Ive done in the name of
+                      learning.
+                    </span>
                   </p>
                 </motion.div>
               </motion.div>
