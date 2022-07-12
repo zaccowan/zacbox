@@ -2,6 +2,20 @@ import { motion } from "framer-motion";
 import React from "react";
 
 function Skills() {
+  const skillAnimate = {
+    visible: {
+      scale: [0, 1.1, 1],
+      opacity: [0, 1],
+      transition: { duration: 1, type: "spring" },
+    },
+    hidden: { scale: 0, opacity: 0 },
+  };
+  const containerAnimate = {
+    visible: {
+      transition: { duration: 5, type: "linear", staggerChildren: 0.1 },
+    },
+  };
+
   return (
     <section className="space-y-6 max-w-6xl mx-auto p-6 my-36">
       <h1 className="font-bold text-6xl text-center redToBlueTextGradient">
@@ -19,9 +33,19 @@ function Skills() {
           Curently Learning
         </div>
       </div>
+
       {/* React */}
-      <div className="flex gap-x-4 gap-y-4 flex-wrap justify-center items-center ">
-        <motion.div className="relative w-auto group">
+      <motion.div
+        className="flex gap-x-4 gap-y-4 flex-wrap justify-center items-center "
+        initial={"hidden"}
+        whileInView={"visible"}
+        variants={containerAnimate}
+      >
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-zinc-900 object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/React-Icon.png"
@@ -31,7 +55,11 @@ function Skills() {
           </div>
         </motion.div>
         {/* Next JS */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/next-js.svg"
@@ -39,9 +67,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Next JS</div>
           </div>
-        </div>
+        </motion.div>
         {/* Firebase */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-yellow-400 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/firebase-logo.webp"
@@ -49,9 +81,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Firebase</div>
           </div>
-        </div>
+        </motion.div>
         {/* HTML */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 border-green-500 border-8 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/html-logo.webp"
@@ -59,9 +95,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">HTML</div>
           </div>
-        </div>
+        </motion.div>
         {/* CSS */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 border-green-500 border-8 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/css-logo.webp"
@@ -69,9 +109,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">CSS</div>
           </div>
-        </div>
+        </motion.div>
         {/* JavaScript */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 border-green-500 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/js-logo.png"
@@ -79,9 +123,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">JavaScript</div>
           </div>
-        </div>
+        </motion.div>
         {/* Java */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/java-logo.png"
@@ -89,9 +137,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Java</div>
           </div>
-        </div>
+        </motion.div>
         {/* Figma */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-yellow-400 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/figma-logo.png"
@@ -99,9 +151,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Figma</div>
           </div>
-        </div>
+        </motion.div>
         {/* Tailwind */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/Tailwind-Logo.png"
@@ -109,9 +165,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Tailwind</div>
           </div>
-        </div>
+        </motion.div>
         {/* Three JS */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white bg-center object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-yellow-400 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/three-logo.png"
@@ -119,9 +179,13 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Three Js</div>
           </div>
-        </div>
+        </motion.div>
         {/* Blender */}
-        <div className="relative w-auto group">
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
           <img
             className="w-40 h-40 bg-white bg-center object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
             src="/skills/blender-logo.ico"
@@ -129,8 +193,22 @@ function Skills() {
           <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
             <div className="text-white text-center font-bold">Blender</div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+        {/* Sanity */}
+        <motion.div
+          className="relative w-auto group"
+          variants={skillAnimate}
+          viewport={{ once: true, amount: 1 }}
+        >
+          <img
+            className="w-40 h-40 bg-white bg-center object-cover rounded-full shadow-xl group-hover:scale-[1.2] transition-all border-green-500 border-8 group-hover:backdrop-blur-3xl group-hover:brightness-50"
+            src="/skills/sanity-logo.png"
+          />
+          <div className="absolute top-0 bottom-0 left-0 right-0 opacity-0 transition-all duration-500 hover:opacity-100 flex items-center justify-center overflow-clip">
+            <div className="text-white text-center font-bold">Sanity</div>
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

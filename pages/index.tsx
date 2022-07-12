@@ -9,6 +9,7 @@ import TextTransition, { presets } from "react-text-transition";
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
   const [introFinished, setIntroFinished] = useState<boolean>(false);
+  const introOut = useTransform(scrollYProgress, [0, 1], [0, 2500]);
   const xInBlue = useTransform(scrollYProgress, [0, 0.2], [-1200, 0]);
   const xInRed = useTransform(scrollYProgress, [0.1, 0.5], [-1200, 0]);
 
@@ -42,6 +43,8 @@ const Home: NextPage = () => {
     hidden: { scale: 0 },
   };
 
+  useEffect(() => {}, [introFinished]);
+
   return (
     <div className="">
       <motion.div
@@ -51,7 +54,9 @@ const Home: NextPage = () => {
       >
         <motion.div
           className="w-[25rem] relative"
-          style={{ x: useTransform(scrollYProgress, [0, 1], [0, 2500]) }}
+          style={{
+            x: introFinished ? introOut : 0,
+          }}
           variants={fadeInFromRight}
         >
           <Link href="/about">
