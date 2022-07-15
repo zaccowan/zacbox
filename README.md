@@ -18,7 +18,7 @@ Personal Portfolio Website built using Next JS Typescript.
       <br/>
 - [ ] Image Gallery (2D and 3D using Three JS)
       <br/>
-- [x ]Blog
+- [x] Blog
 
 # Dependencies
 
