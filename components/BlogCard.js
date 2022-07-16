@@ -7,12 +7,12 @@ function BlogCard({
   postSummary,
   postParagraphs,
   postDate,
-}: BlogProps) {
+}) {
   return (
     <Link
       href={{
         pathname: `/Blog/${postTitle}`,
-        query: { postImgUrl, postTitle, postSummary, postParagraphs, postDate },
+        query: { postImgUrl, postTitle, postSummary, postParagraphs },
       }}
     >
       <div className="flex-col lg:flex-row flex space-y-8 lg:space-y-0 justify-between border shadow-lg rounded-2xl lg:hover:scale-110 transition-all duration-300 cursor-pointer group p-8">
@@ -27,7 +27,6 @@ function BlogCard({
           <p className="text-lg leading-loose tracking-wide font-serif lg:indent-10 break-words">
             {postSummary}
           </p>
-          <p className="italic tracking-widest text-">{postDate}</p>
         </div>
       </div>
     </Link>

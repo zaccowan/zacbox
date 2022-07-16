@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 function PostPage() {
   const router = useRouter();
   const { postImgUrl, postTitle, postDate } = router.query;
-  const postParagraphs = router.query.postParagraphs as string[];
+  const postParagraphs = router.query.postParagraphs;
   return (
     <div className="pt-40 ">
       <div className="flex flex-col items-center  space-y-8">
@@ -15,18 +15,15 @@ function PostPage() {
           <p className="text-sm italic">{postDate}</p>
         </div>
         <img
-          src={postImgUrl as string}
+          src={postImgUrl}
           className="rounded-3xl shadow-xl shadow-black/20 border"
         />
       </div>
       <div className="bg-zinc-800 mt-20 py-20 ">
-        {postParagraphs?.map((paragraph: string) => (
-          <p
-            key={paragraph.substring(0, 22)}
-            className="lg:max-w-5xl lg:mx-auto mx-4 text-center text-white text-2xl py-4"
-          >
-            {" "}
+        {postParagraphs?.map((paragraph) => (
+          <p className="lg:max-w-5xl lg:mx-auto mx-4 text-center text-white text-2xl py-4">
             {paragraph}
+            <br />
           </p>
         ))}
       </div>

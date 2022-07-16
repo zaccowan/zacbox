@@ -1,6 +1,7 @@
-import Link from "next/link";
-import React from "react";
-import BlogCard from "../components/BlogCard";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import BlogCard from "../components/BlogCard.js";
+import { firestore } from "../firebase";
 
 function Blog() {
   const testPosts = [
@@ -12,7 +13,7 @@ function Blog() {
       postSummary:
         "In this post I introduce you to myself. That's really it. Sounds boring. But it actually is not. Okay maybe it is. Maybe it isn't. Why have you read this far? Go ahead and click the post. Do it. Do it. Comeee on. Im tired now. Read it if you want.",
       postParagraphs: [
-        "If you're reading this thank you. I dont recieve any commission for your viewing, but something about the thought of someone reading my thoughts is cool. Also, creepy. Maybe dont read all my thoughts. (That was a note to my self, Im thinking out loud here so cut me some slack.) I'll get to the point though, sorry. ",
+        "If you're reading this thank you. I dont recieve any commission for your viewing, but something about the thought of someone reading my thoughts is cool. Also, creepy. Maybe dont read all my thoughts. (That was a note to my self, Im thinking out loud here so cut me some slack.) I'll get to the point though, sorry.",
         "I want this blog to be a place where I can be transparent. All my important thoughts, whether of value or not will be found here one day. Even better than my thoughts (this is where you get your moneys worth), I plan on sharing the thoughts of others. Ive been on a big reading kick lately. College really pulled that out of me but Im glad it did. Theres a lot you can learn when you listen to what other people have to say. Who knew right? So, I will certainly not shy away from sharing those things here. But, lets be honest, this blog will probably have less traffic than a old west town where all the horses died, but thats okay, my analogy on the other hand (the horse thing I just said) was not. Why would I even let that be posted on the internet.",
         "If and when you do read a post on my blog. Understand where it comes from. This blog space, realistically, is more for me than you. I've started to learn the value of things like journaling, confession, achievement tracking, future visualization, and transparency. I need, and typing my thoughts provides, a means to line out all of my thoughts.",
         "Impulse thought incoming, but I also want to tell stories. I love a good story now days. Being a student athelete in college provides no stories for me to tell whatsoever, so dont expect tales of dining hall converstaions, late night grocery runs, skatepark adventures, or wrestling trips. Im bone dry when it comes to stories about those things.",
@@ -24,6 +25,23 @@ function Blog() {
       postDate: "07/10/2022",
     },
   ];
+  const [blogArray, setBlogArray] = useState([]);
+
+  const dbCollection = collection(firestore, "blog");
+  useEffect(() => {
+    getBlog();
+    console.log(blogArray);
+  }, []);
+  const getBlog = () => {
+    getDocs(dbCollection).then((data) => {
+      setBlogArray(
+        data.docs.map((item) => {
+          return { ...item.data(), id: item.id };
+        })
+      );
+    });
+  };
+
   return (
     <div className="py-20 mx-4 lg:max-w-5xl lg:mx-auto">
       <h1 className="font-semibold text-4xl redToBlueTextGradient py-4">
@@ -31,13 +49,23 @@ function Blog() {
       </h1>
       <hr className="border-t-2 py-10" />
       <div className="space-y-20">
-        {testPosts.map((post) => (
+        {/* {testPosts.map((post) => (
           <BlogCard
             key={post.postId}
             postImgUrl={post.postImgUrl}
             postTitle={post.postTitle}
             postSummary={post.postSummary}
-            postParagraphs={post?.postParagraphs}
+            postParagraphs={post.postParagraphs}
+            postDate={post.postDate}
+          />
+        ))} */}
+        {blogArray.map((post) => (
+          <BlogCard
+            key={post.id}
+            postImgUrl={post.postImage}
+            postTitle={post.postTitle}
+            postSummary={post.postSummary}
+            postParagraphs={post.postParagraphs}
             postDate={post.postDate}
           />
         ))}
