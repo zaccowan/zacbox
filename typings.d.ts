@@ -14,3 +14,11 @@ type BlogPost = {
   postDate: timestamp;
   id: string;
 };
+
+type Skill = {
+  image: string;
+  altText: string;
+  hoverText: string;
+  bgDark?: boolean;
+  color: string;
+};

@@ -94,4 +94,34 @@ html {
         @apply text-center text-white text-lg lg:text-xl max-w-sm lg:max-w-2xl mx-auto py-20
     }
 
+
+    /* 
+    * ****************************
+    * *********  About   *********
+    * ****************************
+    */
+    .gradient-h1-title {
+        @apply font-bold text-6xl text-center redToBlueTextGradient
+    }
+    
+    /* Skills Component Styling
+    */
+    .skill-section-container {
+        @apply space-y-6 max-w-6xl mx-auto p-6 my-36
+    }
+    .skill-key-text {
+        @apply h-10 rounded-full mx-auto flex-full-center uppercase text-white font-semibold
+    }
+    .skills-container {
+        @apply flex-full-center gap-4 flex-wrap
+    }
+    .image-skill-container {
+        @apply w-40 h-40 object-cover rounded-full shadow-xl transition-all ring-4  group-hover:ring-8 group-hover:scale-[1.05] group-hover:brightness-50
+    }
+    .skill-hover-overlay {
+        @apply absolute top-0 bottom-0 left-0 right-0 flex-full-center transition-all duration-500 opacity-0 hover:opacity-100 overflow-clip
+    }
+    .skill-inner-text {
+        @apply text-white text-center font-bold
+    }
 }
