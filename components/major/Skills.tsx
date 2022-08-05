@@ -22,6 +22,7 @@ function Skills() {
         className="skills-container"
         initial={"hidden"}
         whileInView={"visible"}
+        viewport={{ once: true }}
         variants={containerAnimate}
       >
         <Skill
