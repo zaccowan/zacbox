@@ -7,7 +7,7 @@ function Projects() {
     <div>
       <Link className="" href="/unreal">
         <motion.div
-          className="cursor-pointer flex justify-center items-center bg-blue-400 hover:bg-blue-500 transition duration-300 text-white group"
+          className="cursor-pointer flex-full-center bg-blue-400 hover:bg-blue-500 transition duration-300 text-white group"
           transition={{ duration: 2, type: "spring" }}
         >
           <motion.div className="text-4xl font-bold py-40">

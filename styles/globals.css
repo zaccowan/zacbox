@@ -7,6 +7,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Custom Tailwind */
 .drop-shadow-2xl {
     --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / .1)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.3));
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -14,9 +15,28 @@ html {
 
 
 @layer components {
+    /* 
+    * Style Components
+    */
+    .redToBlueTextGradient {
+        @apply bg-gradient-to-br from-blue-400 to-red-400 bg-clip-text text-transparent
+    }
+    .flex-full-center {
+        @apply flex justify-center items-center
+    }
+    .spanQuote {
+        @apply text-5xl font-thin redToBlueTextGradient
+    }
+
+    /* Scrollbar 
+    */
     html {
         @apply scrollbar-thin scrollbar-thumb-red-400 hover:scrollbar-thumb-red-400 scrollbar-track-transparent overflow-y-scroll
     }
+
+    /* 
+    * Nav Styling 
+    */
     .navH1 {
         @apply text-xl font-extrabold uppercase pl-4 py-4 cursor-pointer text-white tracking-wide
     }
@@ -27,13 +47,51 @@ html {
         @apply uppercase text-xs xl:text-sm cursor-pointer text-white xl:tracking-wide py-4 hover:border-b-4 hover:border-sky-400
     }
 
-    .learnMoreBtn {
-        @apply px-4 py-2 border-2 border-sky-400 w-max cursor-pointer
+    /* 
+    * ****************************
+    * *********  Home   **********
+    * ****************************
+    */
+    
+    /* Hero Section */
+    .intro-animation-outer-div {
+        @apply cursor-pointer transition-all duration-500
+        /* Height ensures bounding box does not move text when padding changes.
+        *  Rounded sets outer box radius. */
+        h-20 rounded-lg 
+        /* hover: p-2 makes the border animate in. */
+        hover:p-2 
+        /* Bg opacity initially at zero to prevent any thin line artifacts before/after hover. */
+        bg-gradient-to-r from-blue-600/0 to-red-400/0 hover:from-blue-600 hover:to-red-400
     }
-    .redToBlueTextGradient {
-        @apply bg-gradient-to-br from-blue-400 to-red-400 bg-clip-text text-transparent
+    .intro-animation-inner-div {
+        @apply flex-full-center 
+        /* Ronded sets inner box radius. */
+        rounded-md 
+        /* Bg needs to be set in order to make the gradient border. */
+        bg-white 
+        /* Height ensures inner box is centered*/
+        h-[100%]
     }
-    .spanQuote {
-        @apply text-5xl font-thin redToBlueTextGradient
+    .intro-animation-h1 {
+        @apply text-5xl font-thin py-2 redToBlueTextGradient
     }
+    .intro-animation-p {
+        @apply text-xl font-normal text-center p-4
+    }
+
+    /* Call To Action Section */
+    .blue-hover-darken {
+        @apply cursor-pointer bg-blue-400 hover:bg-blue-500 transition-all duration-300 
+    }
+    .red-hover-darken {
+        @apply cursor-pointer bg-red-400 hover:bg-red-500 transition duration-300
+    }
+    .home-h1 {
+        @apply text-center text-white text-5xl font-bold 
+    }
+    .home-p {
+        @apply text-center text-white text-lg lg:text-xl max-w-sm lg:max-w-2xl mx-auto py-20
+    }
+
 }

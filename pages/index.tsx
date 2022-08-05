@@ -1,18 +1,18 @@
 import type { NextPage } from "next";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import Skills from "../components/Skills";
-import Contact from "../components/Contact.js";
-import TextTransition, { presets } from "react-text-transition";
+import Skills from "../components/major/Skills";
+import Contact from "../components/major/Contact.js";
 
 const Home: NextPage = () => {
-  const { scrollYProgress } = useViewportScroll();
   const [introFinished, setIntroFinished] = useState<boolean>(false);
-  const introOut = useTransform(scrollYProgress, [0, 1], [0, 2500]);
-  const xInBlue = useTransform(scrollYProgress, [0, 0.2], [-1200, 0]);
-  const xInRed = useTransform(scrollYProgress, [0.1, 0.5], [-1200, 0]);
 
+  // Scroll Linked Animate out for intro text
+  const { scrollYProgress } = useViewportScroll();
+  const introOut = useTransform(scrollYProgress, [0, 1], [0, 2500]);
+
+  // Animation Data for intro text when comes into viewport
   const fadeInFromRight = {
     visible: {
       opacity: 1,
@@ -43,12 +43,15 @@ const Home: NextPage = () => {
     hidden: { scale: 0 },
   };
 
-  useEffect(() => {}, [introFinished]);
-
   return (
-    <div className="">
-      <motion.div
-        className="h-screen flex justify-center items-center"
+    <main>
+      {/*
+       *
+       * Hero Section
+       *
+       * */}
+      <motion.section
+        className="h-screen flex-full-center"
         animate={"visible"}
         initial={"hidden"}
       >
@@ -60,82 +63,74 @@ const Home: NextPage = () => {
           variants={fadeInFromRight}
         >
           <Link href="/about">
-            <motion.div
-              className="relative rounded-lg hover:p-2 transition-all duration-500 w-[100%] h-20  bg-gradient-to-r from-blue-600/0 to-red-400/0
-            hover:from-blue-600 hover:to-red-400 cursor-pointer box-border"
-              title="About Me"
-            >
-              <div className="text-5xl font-thin flex justify-center items-center rounded-md bg-white h-[100%] w-[100%] py-2">
+            {/* Gradient Border Lazy Way w/o ::before or ::after */}
+            <div className="intro-animation-outer-div" title="About Me">
+              <div className="intro-animation-inner-div">
                 <motion.h1
-                  className="redToBlueTextGradient py-2"
+                  className="intro-animation-h1"
                   variants={scaleUpRedBlue}
                   whileHover={{ scale: [1, 1.2, 1] }}
                 >
                   Howdy! I&#39;m Zac
                 </motion.h1>
               </div>
-            </motion.div>
+            </div>
           </Link>
 
           <motion.p
-            className="text-xl font-semibold text-center rounded-md p-4"
+            className="intro-animation-p"
             variants={scaleDownUpFade}
             onAnimationComplete={() => setIntroFinished(true)}
           >
-            Welcome to my sandbox. <br /> Here you can find various pieces of my
-            web development test projects and a little bit about me!
+            Welcome to my sandbox.
+            <br />
+            A small glimpse into my world.
+            <br />
+            Dont forget to look around!
           </motion.p>
         </motion.div>
-      </motion.div>
+      </motion.section>
 
-      {introFinished && (
-        <>
-          <motion.div>
-            <Link className="" href="/Projects">
-              <motion.div
-                className="cursor-pointer flex justify-center items-center bg-blue-400 hover:bg-blue-500 transition duration-300 text-white group"
-                transition={{ duration: 2, type: "spring" }}
-              >
-                <motion.div className="text-5xl font-bold py-40">
-                  <h1 className="text-center group-hover:scale-90 transition xl:group-hover:animate-bounce">
-                    Projects
-                  </h1>
-                  <p className="text-center text-lg lg:text-xl py-20 max-w-sm lg:max-w-4xl mx-auto">
-                    Please do click this lovely blue button to see my projects.{" "}
-                    <br />
-                    <span className="text-sm italic">
-                      p.s. I have a lot of ongoing projects to present soon but
-                      for now enjoy some mini projects Ive done in the name of
-                      learning.
-                    </span>
-                  </p>
-                </motion.div>
-              </motion.div>
-            </Link>
-            <Link className="" href="/Blog">
-              <motion.div
-                className="cursor-pointer flex justify-center items-center bg-red-400 hover:bg-red-500 transition duration-300 text-white group"
-                transition={{ duration: 2, type: "spring" }}
-              >
-                <motion.div className="text-5xl font-bold py-40">
-                  <h1 className="text-center group-hover:scale-90 transition xl:group-hover:animate-bounce">
-                    My Blog
-                  </h1>
-                  <p className="text-center text-lg lg:text-xl py-20 max-w-sm lg:max-w-4xl mx-auto">
-                    I have a blog too. How cool right. <br /> Please read, I
-                    spent at least 3 minutes on it.
-                  </p>
-                </motion.div>
-              </motion.div>
-            </Link>
-          </motion.div>
+      {/*
+       *
+       * Calls Section
+       *
+       * */}
+      <section>
+        <Link className="" href="/Projects">
+          <div className="flex-full-center blue-hover-darken group py-40">
+            <div>
+              <h1 className="home-h1 xl:group-hover:animate-bounce">
+                Projects
+              </h1>
+              <p className="home-p">
+                Please do click this lovely blue button to see my projects.{" "}
+                <br />
+                <span className="text-sm italic">
+                  p.s. I have a lot of ongoing projects to present soon but for
+                  now enjoy some mini projects Ive done in the name of learning.
+                </span>
+              </p>
+            </div>
+          </div>
+        </Link>
+        <Link className="" href="/Blog">
+          <div className="flex-full-center red-hover-darken group py-40">
+            <div>
+              <h1 className="home-h1 xl:group-hover:animate-bounce">My Blog</h1>
+              <p className="home-p">
+                I have a blog too. How cool right. <br /> Please read, I spent
+                at least 3 minutes on it.
+              </p>
+            </div>
+          </div>
+        </Link>
 
-          <Skills />
+        <Skills />
 
-          <Contact />
-        </>
-      )}
-    </div>
+        <Contact />
+      </section>
+    </main>
   );
 };
 

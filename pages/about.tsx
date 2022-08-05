@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-import Skills from "../components/Skills";
+import Skills from "../components/major/Skills";
 
 function About() {
   return (
@@ -11,14 +12,16 @@ function About() {
     //----------------------------------------------------------------
 
   */}
-        <div className="relative w-full h-[90vh] bg-black text-white bg-[url('/bg/AboutMeBG.jpg')] bg-auto bg-center bg-fixed flex justify-center items-center">
+        <div className="relative w-full h-[90vh] bg-black text-white bg-[url('/bg/AboutMeBG.jpg')] bg-auto bg-center bg-fixed flex-full-center">
           <h1 className="font-bold text-6xl drop-shadow-lg z-50 -mt-20">
             About Me
           </h1>
-          <div className="absolute -bottom-32 xl:bg-gradient-to-b xl:border-t-2  from-white/50 to-white/5 xl:backdrop-blur-sm w-[40rem] h-[25rem] flex items-center justify-center rounded-t-full">
-            <img
+          <div className=" absolute bottom-0 w-[40rem] h-[25rem] flex items-center justify-center ">
+            <Image
               src="/about/portfolio-mask.png"
-              className="h-96 drop-shadow-2xl object-contain brightness-90 absolute bottom-20"
+              className="h-40 drop-shadow-2xl object-contain brightness-90 absolute bottom-20"
+              layout="fill"
+              alt=""
             />
           </div>
         </div>
@@ -87,7 +90,7 @@ function About() {
                 opportunity to love the Lord my God and to love my neighbor.
                 <br />
                 <br />
-                <span className="flex justify-center items-center rounded-md bg-white p-4">
+                <span className="flex-full-center rounded-md bg-white p-4">
                   <span className="spanQuote py-2">
                     &rdquo;Whatever you do, work heartily, as for the Lord and
                     not for men&rdquo; - Colossians 3:23{" "}
@@ -132,7 +135,7 @@ function About() {
                 like wrestling but, I would like to testify to that fact.
                 <br />
                 <br />
-                <span className="flex justify-center items-center rounded-md bg-zinc-100 p-4">
+                <span className="flex-full-center rounded-md bg-zinc-100 p-4">
                   <span className="spanQuote py-2">I am on YOUR TEAM.</span>
                 </span>
               </p>
@@ -150,7 +153,7 @@ function About() {
     //----------------------------------------------------------------
 
   */}
-        <div className="w-full h-[90vh] bg-black text-white bg-[url('/bg/AboutSiteBG.jpg')] bg-auto bg-center bg-fixed flex justify-center items-center">
+        <div className="w-full h-[90vh] bg-black text-white bg-[url('/bg/AboutSiteBG.jpg')] bg-auto bg-center bg-fixed flex-full-center">
           <h1 className="font-bold text-6xl drop-shadow-lg">About Zacbox</h1>
         </div>
 

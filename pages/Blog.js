@@ -1,6 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import BlogCard from "../components/BlogCard.js";
+import BlogCard from "../components/major/BlogCard.js";
 import { firestore } from "../firebase";
 
 function Blog() {
@@ -49,7 +49,7 @@ function Blog() {
       </h1>
       <hr className="border-t-2 py-10" />
       <div className="space-y-20">
-        {/* {testPosts.map((post) => (
+        {testPosts.map((post) => (
           <BlogCard
             key={post.postId}
             postImgUrl={post.postImgUrl}
@@ -58,8 +58,8 @@ function Blog() {
             postParagraphs={post.postParagraphs}
             postDate={post.postDate}
           />
-        ))} */}
-        {blogArray.map((post) => (
+        ))}
+        {/* {blogArray.map((post) => (
           <BlogCard
             key={post.id}
             postImgUrl={post.postImage}
@@ -68,7 +68,7 @@ function Blog() {
             postParagraphs={post.postParagraphs}
             postDate={post.postDate}
           />
-        ))}
+        ))} */}
       </div>
 
       {/* <div className="absolute bottom-0 top-0 left-0 right-0 py-80 text-6xl text-center bg-black/20 backdrop-blur-sm">
