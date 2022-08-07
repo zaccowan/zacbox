@@ -16,7 +16,7 @@ function About() {
           <h1 className="font-bold text-6xl drop-shadow-lg z-50 -mt-20">
             About Me
           </h1>
-          <div className=" absolute bottom-0 w-[40rem] h-[25rem] flex items-center justify-center ">
+          <div className="absolute bottom-0 w-[40rem] h-[25rem] flex-full-center">
             <Image
               src="/about/portfolio-mask.png"
               className="h-40 drop-shadow-2xl object-contain brightness-90 absolute bottom-20"
