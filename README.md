@@ -1,6 +1,14 @@
 # Zacbox
 
-Personal Portfolio Website built using Next JS Typescript.
+Personal Portfolio Website built using Next JS Typescript. Uses firebase for content management.
+
+Currently deployed with vercel [here](zacbox.vercel.app).
+
+# Setup for running on your own
+``` bash
+npm install
+npm run dev
+``` 
 
 # Features
 
